@@ -104,11 +104,12 @@
 </script>
 </head>
 <body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
 
 <header>
   <nav>
     <a href="../index.html" class="logo"><img src="../img/logo-header.png" alt="La Conciergerie de Véro" width="401" height="59"></a>
-    <ul class="nav-links">
+    <ul class="nav-links" id="menu-principal">
       <li><a href="proprios.html">Pour les propriétaires</a></li>
       <li><a href="vacanciers.html">Pour les vacanciers</a></li>
       <li><a href="zone-intervention.html">Zone d'intervention</a></li>
@@ -118,9 +119,10 @@
     <div class="nav-cta">
       <a href="contact.html" class="btn btn-primary">Nous contacter</a>
     </div>
-    <button class="burger" aria-label="Menu">☰</button>
+    <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu-principal">☰</button>
   </nav>
 </header>
+<main id="contenu">
 
 <div class="breadcrumb">
   <div class="wrap"><a href="../index.html">Accueil</a> / Contact</div>
@@ -139,21 +141,23 @@
         <div class="item">
           <div>
             <b>Téléphone</b>
-            <span>06 15 07 58 33 — du lundi au samedi</span>
+            <span><a href="tel:+33615075833">06 15 07 58 33</a> — du lundi au samedi</span>
           </div>
         </div>
         <div class="item">
           <div>
             <b>E-mail</b>
-            <span>laconciergeriedevero@gmail.com</span>
+            <span><a href="mailto:laconciergeriedevero@gmail.com">laconciergeriedevero@gmail.com</a></span>
           </div>
         </div>
       </div>
+      <p style="margin-top:32px; max-width:640px;">Avant de nous écrire, vous pouvez consulter nos <a href="proprios.html">prestations pour propriétaires</a>, nos <a href="vacanciers.html">services pour vacanciers</a>, notre <a href="zone-intervention.html">zone d'intervention</a> et la <a href="faq.html">FAQ</a>.</p>
     </div>
 
   </div>
 </section>
 
+</main>
 <footer>
   <div class="wrap">
     <div class="foot-grid">
@@ -174,7 +178,7 @@
         <ul>
           <li><a href="mailto:laconciergeriedevero@gmail.com">laconciergeriedevero@gmail.com</a></li>
           <li><a href="tel:0615075833">06 15 07 58 33</a></li>
-          <li><a href="contact.html">Formulaire de contact</a></li>
+          <li><a href="contact.html">Nous contacter</a></li>
         </ul>
       </div>
       <div>

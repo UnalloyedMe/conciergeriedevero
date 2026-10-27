@@ -10,7 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelector('.nav-links');
   if (burger && navLinks) {
     burger.addEventListener('click', () => {
-      navLinks.classList.toggle('mobile-open');
+      const open = navLinks.classList.toggle('mobile-open');
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
   }
 
@@ -59,11 +60,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------- accordéon FAQ ---------- */
   document.querySelectorAll('.faq-item button').forEach((btn) => {
+    btn.setAttribute('aria-expanded', 'false');
     btn.addEventListener('click', () => {
       const item = btn.parentElement;
       const wasOpen = item.classList.contains('open');
       item.parentElement.querySelectorAll('.faq-item').forEach((i) => i.classList.remove('open'));
       if (!wasOpen) item.classList.add('open');
+      item.parentElement.querySelectorAll('.faq-item button').forEach((b) => {
+        b.setAttribute('aria-expanded', b.parentElement.classList.contains('open') ? 'true' : 'false');
+      });
     });
   });
 

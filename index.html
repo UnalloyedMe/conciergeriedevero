@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gardiennage de résidence secondaire en Calvados | La conciergerie de Vero</title>
-<meta name="description" content="Rondes de surveillance, entretien extérieur et conciergerie pour vacanciers sur la Côte de Nacre. Ne laissez pas votre logement sans surveillance ni soin.">
+<title>Conciergerie et gardiennage de résidence secondaire en Calvados | La conciergerie de Vero</title>
+<meta name="description" content="Conciergerie et gardiennage en Calvados : rondes de surveillance, entretien extérieur et conciergerie pour vacanciers sur la Côte de Nacre. Ne laissez pas votre logement sans surveillance ni soin.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://laconciergeriedevero.fr/">
 <link rel="icon" href="favicon.ico" sizes="any">
@@ -15,15 +15,15 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="La conciergerie de Vero">
 <meta property="og:locale" content="fr_FR">
-<meta property="og:title" content="Gardiennage de résidence secondaire en Calvados | La conciergerie de Vero">
-<meta property="og:description" content="Rondes de surveillance, entretien extérieur et conciergerie pour vacanciers sur la Côte de Nacre. Ne laissez pas votre logement sans surveillance ni soin.">
+<meta property="og:title" content="Conciergerie et gardiennage de résidence secondaire en Calvados | La conciergerie de Vero">
+<meta property="og:description" content="Conciergerie et gardiennage en Calvados : rondes de surveillance, entretien extérieur et conciergerie pour vacanciers sur la Côte de Nacre. Ne laissez pas votre logement sans surveillance ni soin.">
 <meta property="og:url" content="https://laconciergeriedevero.fr/">
 <meta property="og:image" content="https://laconciergeriedevero.fr/img/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Gardiennage de résidence secondaire en Calvados | La conciergerie de Vero">
-<meta name="twitter:description" content="Rondes de surveillance, entretien extérieur et conciergerie pour vacanciers sur la Côte de Nacre. Ne laissez pas votre logement sans surveillance ni soin.">
+<meta name="twitter:title" content="Conciergerie et gardiennage de résidence secondaire en Calvados | La conciergerie de Vero">
+<meta name="twitter:description" content="Conciergerie et gardiennage en Calvados : rondes de surveillance, entretien extérieur et conciergerie pour vacanciers sur la Côte de Nacre. Ne laissez pas votre logement sans surveillance ni soin.">
 <meta name="twitter:image" content="https://laconciergeriedevero.fr/img/og-image.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -80,6 +80,11 @@
     "@type": "GeoCoordinates",
     "latitude": 49.2942,
     "longitude": -0.3783
+  },
+  "subOrganization": {
+    "@type": "Organization",
+    "name": "Entretien et Mémoire",
+    "url": "https://entretienetmemoire.laconciergeriedevero.fr/"
   }
 }
 </script>
@@ -145,11 +150,12 @@
 </script>
 </head>
 <body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
 
 <header>
   <nav>
     <a href="index.html" class="logo"><img src="img/logo-header.png" alt="La Conciergerie de Véro" width="401" height="59"></a>
-    <ul class="nav-links">
+    <ul class="nav-links" id="menu-principal">
       <li><a href="pages/proprios.html">Pour les propriétaires</a></li>
       <li><a href="pages/vacanciers.html">Pour les vacanciers</a></li>
       <li><a href="pages/zone-intervention.html">Zone d'intervention</a></li>
@@ -159,9 +165,10 @@
     <div class="nav-cta">
       <a href="pages/contact.html" class="btn btn-primary">Nous contacter</a>
     </div>
-    <button class="burger" aria-label="Menu">☰</button>
+    <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu-principal">☰</button>
   </nav>
 </header>
+<main id="contenu">
 
 <section class="hero">
   <div class="wrap">
@@ -172,7 +179,7 @@ et le bien-être des vacanciers
 </h1>
       <p class="lead">Vous êtes absent pendant une période ponctuelle ? De manière régulière ? Ne laissez pas votre logement sans surveillance ni soin.</p>
       <div class="hero-signature">
-        <img src="img/vero-photo.png" alt="Véro, fondatrice de la Conciergerie de Véro" width="58" height="58" loading="lazy">
+        <picture><source srcset="img/vero-photo-116.webp" type="image/webp"><img src="img/vero-photo-116.png" alt="Véro, fondatrice de la Conciergerie de Véro" width="58" height="58" loading="lazy" decoding="async"></picture>
         <div>
           <b>Véro</b>
           <span>Fondatrice — La Conciergerie de Véro</span>
@@ -190,7 +197,7 @@ et le bien-être des vacanciers
         <h3>Choisissez la durée de votre absence</h3>
 
         <div class="duration-row">
-          <label>Durée <b id="durationVal">1 semaine</b></label>
+          <label>Durée <b id="durationVal">Pack Confort</b></label>
           <input type="range" id="durationRange" min="0" max="2" step="1" value="1">
           <div class="duration-ticks">
             <span>Pack Essentiel</span><span>Pack Confort</span><span>Pack "à la carte"</span>
@@ -199,7 +206,7 @@ et le bien-être des vacanciers
 
         <div class="config-price">
           <span>Tarif indicatif</span>
-          <b id="priceVal">89 €</b>
+          <b id="priceVal">69 €/mois</b>
         </div>
 
         <ul class="check-list" id="checkList">
@@ -223,6 +230,7 @@ et le bien-être des vacanciers
   <a href="pages/proprios.html" class="btn btn-ghost">Voir le détail de toutes les prestations →</a>
 </section>
 
+</main>
 <footer>
   <div class="wrap">
     <div class="foot-grid">
@@ -243,7 +251,7 @@ et le bien-être des vacanciers
         <ul>
           <li><a href="mailto:laconciergeriedevero@gmail.com">laconciergeriedevero@gmail.com</a></li>
           <li><a href="tel:0615075833">06 15 07 58 33</a></li>
-          <li><a href="pages/contact.html">Formulaire de contact</a></li>
+          <li><a href="pages/contact.html">Nous contacter</a></li>
         </ul>
       </div>
       <div>

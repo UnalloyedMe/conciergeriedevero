@@ -105,11 +105,12 @@
 </script>
 </head>
 <body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
 
 <header>
   <nav>
     <a href="../index.html" class="logo"><img src="../img/logo-header.png" alt="La Conciergerie de Véro" width="401" height="59"></a>
-    <ul class="nav-links">
+    <ul class="nav-links" id="menu-principal">
       <li><a href="proprios.html">Pour les propriétaires</a></li>
       <li><a href="vacanciers.html">Pour les vacanciers</a></li>
       <li><a href="zone-intervention.html" class="active">Zone d'intervention</a></li>
@@ -119,9 +120,10 @@
     <div class="nav-cta">
       <a href="contact.html" class="btn btn-primary">Nous contacter</a>
     </div>
-    <button class="burger" aria-label="Menu">☰</button>
+    <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu-principal">☰</button>
   </nav>
 </header>
+<main id="contenu">
 
 <div class="breadcrumb">
   <div class="wrap"><a href="../index.html">Accueil</a> / Zone d'intervention</div>
@@ -130,7 +132,7 @@
 <section class="page-header">
   <div class="wrap" data-reveal>
     <span class="eyebrow">Zone d'intervention</span>
-    <h1>Où intervenons-nous ?</h1>
+    <h1>Où intervenons-nous ? Douvres-la-Délivrande, Caen et Côte de Nacre</h1>
     <p class="lead">La zone d'action s'étend à 20 km aux alentours de Douvres-la-Délivrande.</p>
   </div>
 </section>
@@ -140,13 +142,13 @@
     <div class="coverage" style="padding:0;">
       <div class="wrap" style="padding:0;">
         <div data-reveal>
-          <div id="carte-zone" style="width:100vh; height:100vh; min-height:450px; border-radius:var(--radius); overflow:hidden;"></div>
+          <div id="carte-zone" style="width:100%; height:60vh; min-height:450px; border-radius:var(--radius); overflow:hidden;"></div>
         </div>
       </div>
     </div>
 
     <div data-reveal style="margin-top:48px;">
-      <h2 style="font-size:26px; margin-bottom:16px;">Examples de Communes couvertes</h2>
+      <h2 style="font-size:26px; margin-bottom:16px;">Exemples de communes couvertes</h2>
       <table class="zone-table">
         <thead>
         </thead>
@@ -159,8 +161,7 @@
           <tr><td>Lion-sur-Mer</td></tr>
         </tbody>
       </table>
-      <p style="color:var(--texte-doux); font-size:14px; margin-top:16px;">Evidemment cette carte est à mesure indicative, 
-		des villes limitrophes peuvent être acceptées. Cela fait partie des détails à discuter lors de la prise de contact.</p>
+      <p style="color:var(--texte-doux); font-size:14px; margin-top:16px;">Évidemment, cette carte est donnée à titre indicatif : des villes limitrophes peuvent être acceptées. Cela fait partie des détails à discuter lors de la prise de contact.</p>
     </div>
   </div>
 </section>
@@ -175,6 +176,7 @@
   </div>
 </section>
 
+</main>
 <footer>
   <div class="wrap">
     <div class="foot-grid">
@@ -195,7 +197,7 @@
         <ul>
           <li><a href="mailto:laconciergeriedevero@gmail.com">laconciergeriedevero@gmail.com</a></li>
           <li><a href="tel:0615075833">06 15 07 58 33</a></li>
-          <li><a href="contact.html">Formulaire de contact</a></li>
+          <li><a href="contact.html">Nous contacter</a></li>
         </ul>
       </div>
       <div>
